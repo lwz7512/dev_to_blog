@@ -24,6 +24,8 @@ Minimal Dev.to Blog Publisher
 
 generated from [dev.to account](https://dev.to/settings/account)
 
-## Image tag in format in index.md
+## Image reference in remote url
 
+```
 ![sample image](https://github.com/lwz7512/dev_to_blog/raw/master/cover/wp4speed_series.png)
+```
