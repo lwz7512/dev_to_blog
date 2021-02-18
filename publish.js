@@ -14,29 +14,31 @@ const path  = require('path');
 const apikey = process.env.APIKEY;
 console.log('got apikey: '+apikey);
 
-const articleFolder = process.argv.slice(2);
+const articleFolder = process.argv.slice(2)[0];
 console.log('sending article: '+articleFolder);
 
 (async () => {
   
+  // mock post object, if the same fields exist in index.md, those would take effect instead.
   let post = {
-    title : "Article from nodejs script",
+    title : "Mock title from nodejs script",
     body_markdown : "article markdown content...",
     published : false,
     tags : ["discuss", "javascript"]
   }
 
   try {
-    
-    articleStr = fs.readFileSync(path.join(articleFolder, 'index.md'), 'utf8')
-    if(articleStr) post.body_markdown = articleStr
+    articlePath = path.join(articleFolder, 'index.md');
+    articleStr = fs.readFileSync(articlePath, 'utf8');
+    if(articleStr) post['body_markdown'] = articleStr;
 
   } catch (err) {
     console.log('!!! read article file error!');
     console.error(err);
   }
 
-  console.log('>>> sending artile ...');
+  console.log('>>> sending article ...');
+
   await fetch(`https://dev.to/api/articles`, {
       headers: {
         'api-key': apikey,
@@ -48,6 +50,6 @@ console.log('sending article: '+articleFolder);
       }),
     }).catch((err) => console.log(err));
 
-  console.log('>>> article published!');
+  console.log('<<< article submitted as draft!');
 
 })()

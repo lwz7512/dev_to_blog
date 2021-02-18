@@ -1,6 +1,6 @@
 ---
-title: TEST-Migrating WordPress site with GatsbyJS - phase1
-cover_image: wp4speed_series.png
+title: Migrating WordPress site with GatsbyJS - phase1
+cover_image: https://github.com/lwz7512/dev_to_blog/raw/master/cover/wp4speed_series.png
 description: Deploy a wordpress website and migrate its posts to Gatsby site
 tags: wordpress, gatsby, webdev, aws
 series: Wordpress website speedup series
@@ -16,4 +16,4 @@ continue...
 
 #### Credits
 
-[Rocket icon](https://www.flaticon.com/free-icon/rocket_178158)
+[Rocket icon in cover image](https://www.flaticon.com/free-icon/rocket_178158)
