@@ -1,0 +1,20 @@
+{
+  "name": "dev_to_blog",
+  "version": "1.0.0",
+  "description": "minimal dev.to blog publisher",
+  "main": "publish.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "devto",
+    "blog"
+  ],
+  "author": "lwz7512@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "fs-extra": "^9.1.0",
+    "node-fetch": "^2.6.1"
+  }
+}
